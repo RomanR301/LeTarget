@@ -2,6 +2,8 @@ let front = {
 
   hamburger: $('.hamburger'),
   nav: $('.navbar'),
+  callbackPopup: $('.callback-popup'),
+  briefPopup: $('.brief-popup'),
   filterGridBtn: $('.filter-grid__btn'),
   header_drop: $('.header-drop'),
   slider_options_default: {
@@ -40,6 +42,20 @@ let front = {
           this.hamburger.removeClass('open');
           this.nav.toggleClass('active');
       }
+  },
+  toggleCallback: function() {
+    if (!this.callbackPopup.hasClass('open')){
+        this.callbackPopup.addClass('open')
+    } else {
+        null
+    }
+  },
+  toggleBrief: function() {
+    if (!this.briefPopup.hasClass('open')){
+        this.briefPopup.addClass('open')
+    } else {
+        null
+    }
   },
   navMouseOver: function () {
       $(".primary-navigation .menu-item-has-children").hover(function () {
@@ -92,9 +108,17 @@ let front = {
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
-
+      $(document).on('click', '.callback-trigger', function() {
+         self.toggleCallback(); 
+      });
+      $(document).on('click', '.brief-trigger', function() {
+         self.toggleBrief(); 
+      });
       $(document).on('click', '.coupon-btn', function () {
           self.copyText();
+      });
+      $(document).on('click', '.popup-close', function() {
+        $('.popup').removeClass('open');
       });
       $(document).on('click', '.header-nav__link', function (e) {
           e.preventDefault();
@@ -111,6 +135,13 @@ let front = {
               $(this).toggleClass('active');
           }
       });
+      $(document).on('click', '.work-time', function(){
+		if ($(this).hasClass('custom-data')) {
+			$('.date-project').addClass("show-date");
+		} else {
+			$('.date-project').removeClass("show-date");
+		}
+      })
 
       $('.js-scrollLink').on('click', function () {
 
@@ -225,6 +256,19 @@ jQuery(function () {
 });
 
 $(function () {
+    $(".form-control input, .form-control textarea").focusout(function() {
+        if ($(this).val() != "") {
+            $(this).addClass("has-content");
+        }
+        else {
+            $(this).removeClass("has-content");
+        }
+    })
+    $("#uploadBtn").click(function() {
+        $('#uploadFile').addClass("has-content");
+    })
+
+    
   let detectInview = function () {
       let wh = $(window).height();
       let scrollTop = $(window).scrollTop();
@@ -251,4 +295,11 @@ $(function(){
   $("#footer").load("footer.html");
 });
 
+document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value.replace("C:\\fakepath\\", "");
+};
 
+
+// function alertFilename() {
+//     var thefile = document.getElementById('form-file');
+//     document.getElementById('label-file').innerHTML =  thefile.value; }

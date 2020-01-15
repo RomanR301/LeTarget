@@ -37,7 +37,7 @@
               <span></span>
             </div>
           </div>
-          <div class='navbar'>
+          <div class="navbar">
             <div class="container d-flex flex-column align-justify full-height">
               <div class="row navbar-menu">
                 <div class="col-lg-2"></div>
@@ -76,7 +76,8 @@
                     <li class="menu-item">
                       <a href="#" class="menu-item__link">Портфоліо</a>
                       <div class="menu-item__text">
-                        Ми професіонали, тому показуємо лише свої проекти. Дізнайтесь більше про вже виконані нами проекти.
+                        Ми професіонали, тому показуємо лише свої проекти. Дізнайтесь більше про вже виконані нами
+                        проекти.
                       </div>
                     </li>
                     <li class="menu-item">
@@ -111,14 +112,14 @@
                   </div>
                 </div>
                 <div class="col-lg-4 d-flex align-center">
-                  <span class="navbar-action heading-3 --bold">
+                  <div class="navbar-action heading-3 --bold callback-trigger">
                     НАПИШІТЬ НАМ
-                  </span>
+                  </div>
                 </div>
                 <div class="col-lg-4 d-flex align-center">
-                  <span class="navbar-action heading-3 --bold">
+                  <div class="navbar-action heading-3 --bold brief-trigger">
                     БРИФ
-                  </span>
+                  </div>
                 </div>
               </div>
               <div class="navbar-footer d-flex align-justify">
@@ -153,13 +154,12 @@
                 </div>
               </div>
             </div>
-
           </div>
 
         </div>
       </div>
     </div>
-    <div class="sticky-callback">
+    <div class="sticky-callback callback-trigger">
       Напишіть нам
     </div>
   </header>
@@ -184,9 +184,6 @@
 
           </div>
         </div>
-
-
-
       </div>
     </div>
   </section>
@@ -194,9 +191,431 @@
 
 
 
-  <footer>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="page-title">
+          Контактна форма
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+          <div class="footer-section heading-3 --bold callback-trigger">
+            НАПИШІТЬ НАМ
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="footer-section heading-3 --bold brief-trigger">
+            БРИФ
+          </div>
+        </div>
 
+      </div>
+      <div class="row footer-contacts">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+          <div class="footer-title">
+            Контакти:
+          </div>
+          <ul class="footer-list d-flex flex-column">
+            <a href="tel:+380689167037" class="footer-list__item">+38 068 916 70 37</a>
+            <a href="tel:+380936702051" class="footer-list__item">+380 93 670 20 51</a>
+            <a href="tel:++380993215465" class="footer-list__item">+380 99 321 54 65</a>
+            <a href="mailto:info@letarget@com.ua" class="footer-list__item">info@letarget@com.ua</a>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="footer-title">
+            Відвідайте нас:
+          </div>
+          <div class="footer-list__item">
+            м. Львів, вул. Ак. Лазаренка 2, Офіс №4
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-justify">
+        <div class="col-lg-2">
+          <div class="navbar-rights">
+            @LeTarget 2019
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <ul class="navbar-footer-nav d-flex">
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Google Partners
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Facebook
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Behance
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
+
+
+  <div class="popup brief-popup">
+    <div class="container d-flex flex-column align-justify full-height">
+      <div class="row popup-header d-flex align-middle align-justify">
+        <div class="col-lg-6">
+          <div class="heading-2 --bold">
+            Бриф
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-right">
+          <div class="popup-close d-flex align-center align-middle">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <form action="" class="brief-form">
+          <div class="brief-carousel carousel">
+            <div class="carousel-item">
+              <div class="row d-flex align-center">
+                <div class="col-lg-6">
+                  <div class="brief-heading text-center heading-6 --bold">
+                    Яка послуга вас цікавить?
+                  </div>
+                  <div class="brief-checkboxes">
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="brief_design" value="UX/UI Дизайн" id="brief-service-1">
+                      <label for="brief-service-1">UX/UI Дизайн</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="brief_web" value="Розробка сайту" id="brief-service-2">
+                      <label for="brief-service-2">Розробка сайту</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="brief_uniqueStyle" value="Розробка логотипу та фірмового стилю"
+                        id="brief-service-3">
+                      <label for="brief-service-3">Розробка логотипу та фірмового стилю</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="brief_ad" value="Таргетована та контекстна реклама"
+                        id="brief-service-4">
+                      <label for="brief-service-4">Таргетована та контекстна реклама</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="brief_smm" value="SMM Просування" id="brief-service-5">
+                      <label for="brief-service-5">SMM Просування</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="brief_seo" value="SEO Просування" id="brief-service-6">
+                      <label for="brief-service-6">SEO Просування</label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="brief_mobileApp" value="Розробка мобільного додатку"
+                        id="brief-service-7">
+                      <label for="brief-service-7">Розробка мобільного додатку</label>
+                    </div>
+
+                  </div>
+                  <div class="brief-heading text-center heading-6 --bold mb-40">
+                    Який бюджет проекту? ($)
+                  </div>
+                </div>
+              </div>
+              <div class="row d-flex align-center">
+                <div class="col-lg-3 column">
+                  <div class="form-control">
+                    <input type="number" class="form-input" name="brief_price_from">
+                    <label class="label-name">Від</label>
+                  </div>
+                </div>
+                <div class="col-lg-3 column">
+                  <div class="form-control">
+                    <input type="number" class="form-input" name="brief_price_to">
+                    <label class="label-name">До</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row d-flex align-center">
+                <div class="col-lg-8">
+                  <div class="row align-center d-flex">
+                    <div class="col-lg-6 d-flex flex-column align-middle">
+                      <div class="brief-heading text-center heading-6 --bold">
+                        Терміни для запуску проекту?
+                      </div>
+                      <div class="brief-checkboxes brief-radios">
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_terms" value="Не поспішаємо" id="brief-terms-1">
+                          <label for="brief-terms-1" class="work-time">Не поспішаємо</label>
+                        </div>
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_terms" value="Терміново" id="brief-terms-2">
+                          <label for="brief-terms-2" class="work-time">Терміново</label>
+                        </div>
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_terms" value="Необхідно зробити до" id="brief-terms-3">
+                          <label for="brief-terms-3" class="work-time custom-data">Необхідно зробити до</label>
+                        </div>
+                        <div class="form-control form-date date-project">
+                          <input type="date" class="form-input date-project" name="brief_terms_date"
+                            id="brief-terms-date">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-flex flex-column align-middle">
+                      <div class="brief-heading text-center heading-6 --bold">
+                        Звідки ви дізналися про нас?
+                      </div>
+                      <div class="brief-checkboxes brief-radios">
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_found_us" value="Пошукова видача" id="brief-found-us-1">
+                          <label for="brief-found-us-1">Пошукова видача</label>
+                        </div>
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_found_us" value="Реклама в Google" id="brief-found-us-2">
+                          <label for="brief-found-us-2">Реклама в Google</label>
+                        </div>
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_found_us" value="Соціальні мережі" id="brief-found-us-3">
+                          <label for="brief-found-us-3">Соціальні мережі</label>
+                        </div>
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_found_us" value="Рекомендації" id="brief-found-us-4">
+                          <label for="brief-found-us-4">Рекомендації</label>
+                        </div>
+                        <div class="form-checkbox form-radio">
+                          <input type="radio" name="brief_found_us" value="Інше" id="brief-found-us-5">
+                          <label for="brief-found-us-5">Інше</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-center">
+                <div class="col-lg-4 d-flex flex-column align-middle">
+                  <div class="brief-heading text-center heading-6 --bold mb-40">
+                    Ваше технічне завдання (якщо воно є)
+                  </div>
+                  <div class="form-control form-control-file">
+                    <input id="uploadFile" class="form-input" />
+                    <label for="" class="label-name">Ваш файл</label>
+                    <div class="fileBrowse">
+                      <input id="uploadBtn" type="file" class="form-file" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="item-wrap">
+                <div class="row d-flex align-center">
+                  <div class="col-lg-6">
+                    <div class="row m-row">
+                      <div class="col-lg-6 column">
+                        <div class="form-control">
+                          <input type="text" class="form-input" name="brief_name" required>
+                          <label class="label-name">
+                            *Ваше ім’я
+                          </label>
+                        </div>
+                        <div class="form-control">
+                          <input type="tel" class="form-input" name="brief_phone" required>
+                          <label class="label-name">
+                            *Телефон
+                          </label>
+                        </div>
+                        <div class="form-control">
+                          <input type="email" class="form-input" name="brief_email" required>
+                          <label class="label-name">
+                            *Email
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 column">
+                        <div class="form-control">
+                          <input type="text" class="form-input" name="brief_site" required>
+                          <label class="label-name">
+                            Ваш сайт (якщо є)
+                          </label>
+                        </div>
+                        <div class="form-control">
+                          <input type="text" class="form-input" name="brief_activity" required>
+                          <label class="label-name">
+                            Сфера діяльності
+                          </label>
+                        </div>
+                        <div class="form-control">
+                          <input type="text" class="form-input" name="brief_location" required>
+                          <label class="label-name">
+                            Звідки ви
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-control w-100">
+                        <textarea name="callback_message" rows="6" class="form-textarea"></textarea>
+                        <label class="label-name">Ваше повідомлення</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row align-center">
+        <div class="col-lg-8 d-flex align-justify align-middle">
+          <div class="brief-carousel-btn prev-brief hidden">
+            <span>Назад</span>
+          </div>
+          <div class="brief-counter">
+            1 / 3
+          </div>
+          <div class="brief-carousel-btn next-brief">
+            <span>Далі</span>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-justify">
+        <div class="col-lg-2">
+          <div class="navbar-rights">
+            @LeTarget 2019
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <ul class="navbar-footer-nav d-flex">
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Google Partners
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Facebook
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Behance
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="popup callback-popup">
+    <div class="container d-flex flex-column align-justify full-height">
+      <div class="row popup-header d-flex align-middle align-justify">
+        <div class="col-lg-6">
+          <div class=" heading-2 --bold">
+            Контактна форма
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-right">
+          <div class="popup-close d-flex align-center align-middle">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-center">
+        <div class="col-lg-6">
+          <div class="callback-form">
+            <form action="">
+              <div class="row m-row">
+                <div class="col-lg-6 column d-flex flex-column align-justify">
+                  <div class="form-control">
+                    <input type="text" class="form-input" name="callback_name" required>
+                    <label class="label-name">
+                      *Ваше ім’я
+                    </label>
+                  </div>
+                  <div class="form-control">
+                    <input type="tel" class="form-input" name="callback_phone" required>
+                    <label class="label-name">
+                      *Телефон
+                    </label>
+                  </div>
+                  <div class="form-control">
+                    <input type="email" class="form-input" name="callback_email" required>
+                    <label class="label-name">
+                      *Email
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-6 column">
+                  <div class="form-control w-100">
+                    <textarea name="callback_message" cols="30" rows="8" class="form-textarea"></textarea>
+                    <label class="label-name">Ваше повідомлення</label>
+                  </div>
+                </div>
+                <div class="col-lg-12 d-flex align-center">
+                  <div class="form-control">
+                    <input type="submit" class="btn-link" value="НАДІСЛАТИ">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-justify">
+        <div class="col-lg-2">
+          <div class="navbar-rights">
+            @LeTarget 2019
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <ul class="navbar-footer-nav d-flex">
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Google Partners
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Facebook
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Behance
+              </a>
+            </li>
+            <li class="navbar-footer-nav__link">
+              <a href="#">
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>
   <script src="js/libs/flickity.pkgd.min.js"></script>

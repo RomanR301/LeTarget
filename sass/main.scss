@@ -11,6 +11,9 @@
 @import "components/_buttons";
 @import "components/_modals";
 @import "components/_entry-content";
+@import "components/_other";
+@import "components/_forms";
+@import "components/_brief";
 
 // Layout
 @import "layout/_grid";
@@ -20,4 +23,5 @@
 @import "vendor/flickity";
 // Pages
 @import "pages/_home";
+@import "pages/_contacts";
 

@@ -1,0 +1,86 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.brief {
+  &-form {
+    width: 100%;
+  }
+  &-heading {
+    margin-bottom: 50px;
+  }
+  &-checkboxes {
+    margin-bottom: 40px;
+  }
+  &-popup {
+    & .flickity-prev-next-button {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.item-wrap {
+  height: 100%;
+}
+
+.brief-carousel {
+  & .carousel-item {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-btn {
+    cursor: pointer;
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    & span {
+      display: flex;
+      position: relative;
+      align-items: center;
+      padding: 0 30px 0 0;
+      font-size: 16px;
+      line-height: 24px;
+      &:before {
+        content: "\e901";
+        display: block;
+        position: absolute;
+        right: 0;
+        font-size: 28px;
+        font-family: 'icomoon' !important;
+        @include transition(.3);
+      }
+      &:hover {
+        &:before {
+          right: -6px;
+        }
+      }
+    }
+    &.prev-brief span {
+      padding: 0 0 0 30px;
+      &:before{
+        transform: rotate(180deg);
+        left: 0;
+        right: unset;
+      }
+      &:hover {
+        &:before {
+          left: -6px;
+        }
+      }
+    }
+  }
+}
+
+.date-project {
+  opacity: 0;
+  visibility: hidden;
+  @include transition(.3);
+  &.show-date {
+    opacity: 1;
+    visibility: visible;
+  }
+}

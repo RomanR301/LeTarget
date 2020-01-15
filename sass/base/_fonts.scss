@@ -2,20 +2,11 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../fonts/GothamPro-Black.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gotham';
   src: url('../fonts/GothamPro-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-
 
 @font-face {
   font-family: 'Gotham';
@@ -33,15 +24,6 @@
   font-display: swap;
 }
 
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Black.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Bold.ttf') format('truetype');
@@ -50,30 +32,14 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?j4w0mi');
-  src:  url('../fonts/icomoon.eot?j4w0mi#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?j4w0mi') format('truetype'),
-    url('../fonts/icomoon.woff?j4w0mi') format('woff'),
-    url('../fonts/icomoon.svg?j4w0mi#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?o19zjl');
+  src:  url('../fonts/icomoon.eot?o19zjl#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?o19zjl') format('truetype'),
+    url('../fonts/icomoon.woff?o19zjl') format('woff'),
+    url('../fonts/icomoon.svg?o19zjl#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

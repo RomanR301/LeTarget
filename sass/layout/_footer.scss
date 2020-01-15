@@ -1,2 +1,24 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.footer {
+  &-section {
+    cursor: pointer;
+    margin: 80px 0 90px 0;
+  }
+  &-title {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &-list {
+    &__item {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: $whiteColor;
+    }
+  }
+  &-contacts {
+    margin-bottom: 115px;
+  }
+}
