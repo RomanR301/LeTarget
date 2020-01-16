@@ -41,32 +41,32 @@ h3, h4, h5, h6 {
 }
 
 .heading-1 {
-  @include fontSize(64, 28);
+  @include fontSize(28, 64);
   line-height: 1.125;
 }
 
 .heading-2 {
-  @include fontSize(48, 28);
+  @include fontSize(28, 48);
   line-height: 1.125;
 }
 
 .heading-3 {
-  @include fontSize(32, 18);
+  @include fontSize(18, 32);
   line-height: 1.22;
 }
 
 .heading-4 {
-  @include fontSize(24, 16);
+  @include fontSize(16, 20);
   line-height: 1.32;
 }
 
 .heading-5 {
-  @include fontSize(20, 16);
+  @include fontSize(16, 24);
   line-height: 1.333;
 }
 
 .heading-6 {
-  @include fontSize(18, 14);
+  @include fontSize(14, 18);
   line-height: 1.33;
 }
 

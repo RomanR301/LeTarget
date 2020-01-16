@@ -45,3 +45,37 @@
     }
   }
 }
+
+.other-page {
+  height: calc(100vh - 104px);
+  &.error-page {
+    & .other-page__heading {
+      font-family: Roboto;
+      @include fontSize(120, 160);
+      line-height: 1,16;
+    }
+  }
+  &__heading {
+
+  }
+  &__title {
+    @include fontSize(18, 32);
+    line-height: 1.22;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 25px;
+    max-width: 65%;
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  &-footer {
+    padding: 15px 0;
+  }
+}
