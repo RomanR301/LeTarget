@@ -48,10 +48,10 @@
 
 // 404, thankyou page
 .other-page {
-  height: calc(100vh - 104px);
+  height: calc(100vh - 50px);
   &.error-page {
     & .other-page__heading {
-      font-family: Roboto;
+      font-family: 'Roboto';
       @include fontSize(120, 160);
       line-height: 1,16;
     }
@@ -67,6 +67,9 @@
     line-height: 24px;
     margin-bottom: 25px;
     max-width: 65%;
+    @media (max-width: $breakpoint-sm) {
+      max-width: 90%;
+    }
   }
   &__link {
     font-size: 18px;
@@ -115,6 +118,39 @@
       right: -17px;
       width: 15px;
       top: -10px;
+    }
+  }
+}
+
+.copyright {
+  padding: 15px 0;
+  &-list {
+    &__item {
+      margin-right: 20px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: $whiteColor;
+        @include transition(.4);
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+    &__item:last-child {
+      margin: 0;
+    }
+  }
+  &.mobile {
+    @media (max-width: $breakpoint-md) {
+      display: none;
     }
   }
 }

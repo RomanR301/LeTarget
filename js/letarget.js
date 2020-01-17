@@ -17,7 +17,7 @@ let front = {
 
   init: function () {
       this.events();
-      this.headerScroll();
+    //   this.headerScroll();
   },
 
   newSlider: function (selector, options) {
@@ -26,13 +26,13 @@ let front = {
       return new Flickity(document.querySelector(selector), options);
   },
 
-  headerScroll: function () {
-      if ($(window).scrollTop() > 5) {
-          $('.header').addClass('fixed');
-      } else {
-          $('.header').removeClass('fixed');
-      }
-  },
+//   headerScroll: function () {
+//       if ($(window).scrollTop() > 5) {
+//           $('.header').addClass('fixed');
+//       } else {
+//           $('.header').removeClass('fixed');
+//       }
+//   },
 
   toggleNav: function () {
       if (!this.hamburger.hasClass('open')) {
@@ -101,9 +101,9 @@ let front = {
       let self = this;
 
       self.navMouseOver();
-      $(window).on('scroll', function () {
-          self.headerScroll();
-      });
+    //   $(window).on('scroll', function () {
+    //       self.headerScroll();
+    //   });
 
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
@@ -120,13 +120,13 @@ let front = {
       $(document).on('click', '.popup-close', function() {
         $('.popup').removeClass('open');
       });
-      $(document).on('click', '.header-nav__link', function (e) {
-          e.preventDefault();
-          console.log($(window).width());
-          if ($(window).width() + 16 < 991) {
-              $(this).toggleClass('js-link-active');
-          }
-      });
+    //   $(document).on('click', '.header-nav__link', function (e) {
+    //       e.preventDefault();
+    //       console.log($(window).width());
+    //       if ($(window).width() + 16 < 991) {
+    //           $(this).toggleClass('js-link-active');
+    //       }
+    //   });
 
 
       $(document).on('click', '.footer-navigation .menu-item-has-children > a', function (e) {
@@ -214,20 +214,20 @@ jQuery(function () {
 
 
   // Hide Header on on scroll down
-  let didScroll;
-  let lastScrollTop = 0;
-  let delta = 5;
-  let navbarHeight = $('.header').outerHeight();
+//   let didScroll;
+//   let lastScrollTop = 0;
+//   let delta = 5;
+// //   let navbarHeight = $('.header').outerHeight();
 
-  $(window).scroll(function (event) {
-      didScroll = true;
-  });
+//   $(window).scroll(function (event) {
+//       didScroll = true;
+//   });
 
   $(window).scroll(function(){
       $('.parallax-image').each(function(){
             if ($(this).offset().top < $(window).scrollTop()) {
             var difference = $(window).scrollTop() - $(this).offset().top;
-            var half = (difference / 3.5) + 'px',
+            var half = (difference / 2) + 'px',
                 transform = 'translate3d( 0, ' + half + ',0)';
             $(this).find('img').css('transform', transform);
         } else {
@@ -236,36 +236,34 @@ jQuery(function () {
       });
   });
 
-  
+//   setInterval(function () {
+//       if (didScroll) {
+//           hasScrolled();
+//           didScroll = false;
+//       }
+//   }, 250);
 
-  setInterval(function () {
-      if (didScroll) {
-          hasScrolled();
-          didScroll = false;
-      }
-  }, 250);
+//   function hasScrolled() {
+//       let st = $(this).scrollTop();
 
-  function hasScrolled() {
-      let st = $(this).scrollTop();
+//       // Make sure they scroll more than delta
+//       if (Math.abs(lastScrollTop - st) <= delta)
+//           return;
 
-      // Make sure they scroll more than delta
-      if (Math.abs(lastScrollTop - st) <= delta)
-          return;
+//       // If they scrolled down and are past the navbar, add class .nav-up.
+//       // This is necessary so you never see what is "behind" the navbar.
+//       if (st > lastScrollTop && st > navbarHeight) {
+//           // Scroll Down
+//           $('.header').removeClass('--down').addClass('--up');
+//       } else {
+//           // Scroll Up
+//           if (st + $(window).height() < $(document).height()) {
+//               $('.header').removeClass('--up').addClass('--down');
+//           }
+//       }
 
-      // If they scrolled down and are past the navbar, add class .nav-up.
-      // This is necessary so you never see what is "behind" the navbar.
-      if (st > lastScrollTop && st > navbarHeight) {
-          // Scroll Down
-          $('.header').removeClass('--down').addClass('--up');
-      } else {
-          // Scroll Up
-          if (st + $(window).height() < $(document).height()) {
-              $('.header').removeClass('--up').addClass('--down');
-          }
-      }
-
-      lastScrollTop = st;
-  }
+//       lastScrollTop = st;
+//   }
 
 
 });
@@ -284,30 +282,25 @@ $(function () {
     })
 
     
-  let detectInview = function () {
-      let wh = $(window).height();
-      let scrollTop = $(window).scrollTop();
+//   let detectInview = function () {
+//       let wh = $(window).height();
+//       let scrollTop = $(window).scrollTop();
 
-      $('.detect-inview').each(function () {
-          let el = $(this);
-          if (el.offset().top - wh + 300 <= scrollTop && scrollTop <= el.offset().top + el.height()) {
-              el.addClass('to-animate');
+//       $('.detect-inview').each(function () {
+//           let el = $(this);
+//           if (el.offset().top - wh + 300 <= scrollTop && scrollTop <= el.offset().top + el.height()) {
+//               el.addClass('to-animate');
 
-          } else {
-              el.removeClass('to-animate');
-          }
-      });
+//           } else {
+//               el.removeClass('to-animate');
+//           }
+//       });
 
-  }
-  detectInview();
-  $(window).on('scroll', function () {
-      detectInview();
-  });
-});
-
-$(function(){
-  $("#header").load("header.html");
-  $("#footer").load("footer.html");
+//   }
+//   detectInview();
+//   $(window).on('scroll', function () {
+//       detectInview();
+//   });
 });
 
 document.getElementById("uploadBtn").onchange = function () {

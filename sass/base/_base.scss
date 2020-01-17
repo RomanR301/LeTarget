@@ -47,7 +47,7 @@ img {
 }
 
 .section-title {
-  @include fontSize(48, 20);
+  @include fontSize(20, 48);
   line-height: 1.125;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 80;

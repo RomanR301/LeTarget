@@ -14,19 +14,19 @@
 </head>
 
 <body>
-  <header class="header" id="musthead">
+  <header class="header">
     <div class="container">
       <div class="row align-middle">
         <div class="col-lg-2 header-logo">
-          <a href="#">
+          <a href="home.html">
             <img src="./img/LeTarget.svg" alt="LeTarget logo">
           </a>
         </div>
         <div class="col-lg-2 header-control d-flex">
           <ul class="header-lang d-flex">
-            <li class="header-lang__item current-lang">
+            <li class="lang-item current-lang">
               <a lang="uk" hreflang="uk">ua</a></li>
-            <li class="header-lang__item">
+            <li class="lang-item">
               <a lang="ru-RU" hreflang="ru-RU">ru</a></li>
           </ul>
           <div class="hamburger d-flex align-middle">
@@ -37,11 +37,11 @@
               <span></span>
             </div>
           </div>
-          <div class="navbar">
+          <div class="navbar active">
             <div class="container d-flex flex-column align-justify full-height">
               <div class="row navbar-menu">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-9">
+                <div class="col-md-2"></div>
+                <div class="col-md-9 col-sm-12">
                   <ul class="primary-navigation">
                     <li class="menu-item">
                       <a href="#" class="menu-item__link">Про нас</a>
@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="row navbar-additions align-middle">
-                <div class="col-lg-4 d-flex align-center">
+                <div class="addition-item col-md-4 d-flex align-center">
                   <div class="navbar-contacts">
                     <div class="contacts__item">
                       Львів, Лазаренка 2
@@ -111,41 +111,41 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 d-flex align-center">
+                <div class="addition-item col-md-4 d-flex align-center">
                   <div class="navbar-action heading-3 --bold callback-trigger">
                     НАПИШІТЬ НАМ
                   </div>
                 </div>
-                <div class="col-lg-4 d-flex align-center">
+                <div class="addition-item col-md-4 d-flex align-center">
                   <div class="navbar-action heading-3 --bold brief-trigger">
                     БРИФ
                   </div>
                 </div>
               </div>
-              <div class="navbar-footer d-flex align-justify">
+              <div class="row d-flex align-justify align-middle copyright mobile">
                 <div class="col-lg-2">
-                  <div class="navbar-rights">
+                  <div class="copyright-company">
                     @LeTarget 2019
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <ul class="navbar-footer-nav d-flex">
-                    <li class="navbar-footer-nav__link">
+                <div class="col-lg-5 ">
+                  <ul class="copyright-list d-flex">
+                    <li class="copyright-list__item">
                       <a href="#">
                         Google Partners
                       </a>
                     </li>
-                    <li class="navbar-footer-nav__link">
+                    <li class="copyright-list__item">
                       <a href="#">
                         Facebook
                       </a>
                     </li>
-                    <li class="navbar-footer-nav__link">
+                    <li class="copyright-list__item">
                       <a href="#">
                         Behance
                       </a>
                     </li>
-                    <li class="navbar-footer-nav__link">
+                    <li class="copyright-list__item">
                       <a href="#">
                         Instagram
                       </a>
@@ -173,7 +173,7 @@
               <div class="glitch" data-text="404">404</div>
             </div>
           </div>
-          <div class="other-page__title">
+          <div class="other-page__title text-center">
             Вибачте, даної сторінки не існує
           </div>
           <div class="other-page__description text-center">
@@ -182,32 +182,30 @@
           <a href="home.html" class="other-page__link btn-link">НА ГОЛОВНУ</a>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="row d-flex align-justify other-page-footer">
+      <div class="row d-flex align-justify align-middle copyright mobile">
         <div class="col-lg-2">
-          <div class="navbar-rights">
+          <div class="copyright-company">
             @LeTarget 2019
           </div>
         </div>
-        <div class="col-lg-4">
-          <ul class="navbar-footer-nav d-flex">
-            <li class="navbar-footer-nav__link">
+        <div class="col-lg-5 d-flex align-right">
+          <ul class="copyright-list d-flex">
+            <li class="copyright-list__item">
               <a href="#">
                 Google Partners
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Facebook
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Behance
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Instagram
               </a>
@@ -216,6 +214,10 @@
         </div>
       </div>
     </div>
+
+    <!-- <div class="container">
+
+    </div> -->
 
   </section>
   <div class="popup brief-popup">
@@ -448,22 +450,22 @@
         </div>
         <div class="col-lg-4">
           <ul class="navbar-footer-nav d-flex">
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Google Partners
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Facebook
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Behance
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Instagram
               </a>
@@ -539,22 +541,22 @@
         </div>
         <div class="col-lg-4">
           <ul class="navbar-footer-nav d-flex">
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Google Partners
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Facebook
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Behance
               </a>
             </li>
-            <li class="navbar-footer-nav__link">
+            <li class="copyright-list__item">
               <a href="#">
                 Instagram
               </a>

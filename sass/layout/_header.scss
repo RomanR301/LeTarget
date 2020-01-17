@@ -3,12 +3,17 @@
 
 .header {
   padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $bodyBackground;
+  z-index: 100;
   &-control {
     margin-left: auto;
   }
   &-lang {
     margin-right: 20px;
-    &__item {
+    & .lang-item {
       margin-right: 8px;
       & a {
         font-size: 16px;
@@ -75,6 +80,19 @@
   opacity: 0;
   @include transition(.35);
   transition-delay: 0.85s;
+  @media (max-width: $breakpoint-lg) {
+    & .addition-item:first-child {
+      justify-content: flex-start;
+    }
+    & .addition-item:last-child {
+      justify-content: flex-end;
+    }
+  }
+  @media (max-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .navbar-footer {
@@ -84,19 +102,38 @@
 }
 
 .navbar {
-  padding: 24px 15px 15px 15px;
+  padding: 24px 15px 0 15px;
   position: fixed;
   width: 100%;
   right: -110%;
-  top: 60px;
+  top: 50px;
   bottom: 0;
   background: $bodyBackground;
-  height: calc(100% - 60px);
+  height: calc(100% - 50px);
   @include transition(.5);
+  @media (max-width: $breakpoint-md) {
+    & > .container {
+      justify-content: flex-start;
+    }
+  }
+  &-menu {
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+      justify-content: center;
+      & div:first-child { 
+        display: none;
+      }
+    }
+  }
   &.active {
     right: 0;
     z-index: 89;
     & .primary-navigation {
+      @media (max-width: $breakpoint-md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       & .menu-item {
         margin-left: 0;
         opacity: 1;
@@ -134,28 +171,6 @@
   &-additions, &-footer {
     opacity: 0;
   }
-  &-footer-nav__link {
-    margin-right: 20px;
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
-      background: $whiteColor;
-      @include transition(.4);
-    }
-    &:hover {
-      &:before {
-        width: 100%;
-      }
-    }
-  }
-  &-footer-nav__link:last-child {
-    margin: 0;
-  }
 }
 
 .menu-item {
@@ -181,14 +196,16 @@
   }
   &__link {
     color: $greyColor;
-    @include fontSize(32, 18);
+    @include fontSize(18, 32);
     line-height: 1.22;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     @include transition(.4);
     background: $bodyBackground;
     padding-right: 20px;
-
+    @media (max-width: $breakpoint-md) {
+      padding: 0;
+    }
   }
   &__text {
     position: absolute;
