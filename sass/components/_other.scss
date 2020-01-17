@@ -46,6 +46,7 @@
   }
 }
 
+// 404, thankyou page
 .other-page {
   height: calc(100vh - 104px);
   &.error-page {
@@ -54,9 +55,6 @@
       @include fontSize(120, 160);
       line-height: 1,16;
     }
-  }
-  &__heading {
-
   }
   &__title {
     @include fontSize(18, 32);
@@ -77,5 +75,46 @@
   }
   &-footer {
     padding: 15px 0;
+  }
+}
+
+// categories menu (blog, portfolio pages)
+.categories {
+  &-list {
+    justify-content: space-around;
+    margin-bottom: 60px;
+    &__item {
+      position: relative;
+    }
+    &__link {
+      color: #EFEFEF;
+      font-size: 16px;
+      line-height: 21px;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 1px;
+        background: $whiteColor;
+        @include transition(.3);
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+    &__counter {
+      position: absolute;
+      font-size: 12px;
+      display: block;
+      line-height: 16px;
+      right: -17px;
+      width: 15px;
+      top: -10px;
+    }
   }
 }

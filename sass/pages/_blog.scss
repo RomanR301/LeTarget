@@ -1,46 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.blog {
-  &-list {
-    justify-content: space-around;
-    margin-bottom: 60px;
-    &__item {
-      position: relative;
-    }
-    &__link {
-      color: #EFEFEF;
-      font-size: 16px;
-      line-height: 21px;
-      position: relative;
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        width: 0;
-        height: 1px;
-        background: $whiteColor;
-        @include transition(.3);
-      }
-      &:hover {
-        &:after {
-          width: 100%;
-        }
-      }
-    }
-    &__counter {
-      position: absolute;
-      font-size: 12px;
-      display: block;
-      line-height: 16px;
-      right: -17px;
-      width: 15px;
-      top: -10px;
-    }
-  }
-}
-
 .blog-item {
   margin-bottom: 80px;
   &__image {
@@ -92,8 +52,9 @@
   }
 }
 
+// Blog single
 .single-post {
-  & .blog-list {
+  & .categories-list {
     margin-top: 60px;
   }
 }

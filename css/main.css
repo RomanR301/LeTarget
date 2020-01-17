@@ -693,7 +693,7 @@ img {
   font-size: -moz-calc(28px + (64 - 28) * ((100vw - 300px) / (1900 - 300)));
   font-size: calc(28px + (64 - 28) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.125;
-  margin-bottom: 60px;
+  margin: 30px 0 60px 0;
 }
 
 .body-padding {
@@ -975,6 +975,11 @@ h3, h4, h5, h6 {
 
 .icon-arrow-big:before {
   content: "\e901";
+  color: #fff;
+}
+
+.icon-arrow-next:before {
+  content: "\e902";
   color: #fff;
 }
 
@@ -1400,6 +1405,50 @@ h3, h4, h5, h6 {
   padding: 15px 0;
 }
 
+.categories-list {
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.categories-list__item {
+  position: relative;
+}
+
+.categories-list__link {
+  color: #EFEFEF;
+  font-size: 16px;
+  line-height: 21px;
+  position: relative;
+}
+
+.categories-list__link:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.categories-list__link:hover:after {
+  width: 100%;
+}
+
+.categories-list__counter {
+  position: absolute;
+  font-size: 12px;
+  display: block;
+  line-height: 16px;
+  right: -17px;
+  width: 15px;
+  top: -10px;
+}
+
 .form-control {
   margin-bottom: 30px;
   position: relative;
@@ -1752,6 +1801,10 @@ h3, h4, h5, h6 {
 
 .w-100 {
   width: 100%;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
 }
 
 .mb-40 {
@@ -2894,50 +2947,6 @@ h3, h4, h5, h6 {
   margin: 50px 0 0 0;
 }
 
-.blog-list {
-  justify-content: space-around;
-  margin-bottom: 60px;
-}
-
-.blog-list__item {
-  position: relative;
-}
-
-.blog-list__link {
-  color: #EFEFEF;
-  font-size: 16px;
-  line-height: 21px;
-  position: relative;
-}
-
-.blog-list__link:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 1px;
-  background: #ffffff;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.blog-list__link:hover:after {
-  width: 100%;
-}
-
-.blog-list__counter {
-  position: absolute;
-  font-size: 12px;
-  display: block;
-  line-height: 16px;
-  right: -17px;
-  width: 15px;
-  top: -10px;
-}
-
 .blog-item {
   margin-bottom: 80px;
 }
@@ -3001,7 +3010,7 @@ h3, h4, h5, h6 {
   background: #ffffff;
 }
 
-.single-post .blog-list {
+.single-post .categories-list {
   margin-top: 60px;
 }
 
@@ -3051,5 +3060,94 @@ h3, h4, h5, h6 {
 .abs {
   position: absolute;
   right: 0;
+}
+
+.portfolio-item {
+  position: relative;
+}
+
+.portfolio-item-hover {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 96%;
+  height: 94%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  padding: 30px 30px 20px 30px;
+}
+
+.portfolio-item-hover__more {
+  position: relative;
+}
+
+.portfolio-item-hover__more:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 100%;
+  height: 1px;
+  background: #777777;
+}
+
+.portfolio-item-hover__more span {
+  display: block;
+  padding-left: 12px;
+}
+
+.portfolio-item-hover__link {
+  position: relative;
+}
+
+.portfolio-item-hover__link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -11px;
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.portfolio-item-hover__link:hover:after {
+  width: 100%;
+}
+
+.portfolio-item:hover .portfolio-item-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.row {
+  width: 100%;
+}
+
+.portfolio-single .categories-list {
+  margin-top: 60px;
+}
+
+.parallax-image {
+  margin: 30px 0 80px 0;
+  padding-top: 50%;
+  position: relative;
+}
+
+.parallax-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */

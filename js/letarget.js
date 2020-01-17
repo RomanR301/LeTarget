@@ -223,6 +223,21 @@ jQuery(function () {
       didScroll = true;
   });
 
+  $(window).scroll(function(){
+      $('.parallax-image').each(function(){
+            if ($(this).offset().top < $(window).scrollTop()) {
+            var difference = $(window).scrollTop() - $(this).offset().top;
+            var half = (difference / 3.5) + 'px',
+                transform = 'translate3d( 0, ' + half + ',0)';
+            $(this).find('img').css('transform', transform);
+        } else {
+            $(this).find('img').css('transform', 'translate3d(0,0,0)');
+        }
+      });
+  });
+
+  
+
   setInterval(function () {
       if (didScroll) {
           hasScrolled();
@@ -303,3 +318,4 @@ document.getElementById("uploadBtn").onchange = function () {
 // function alertFilename() {
 //     var thefile = document.getElementById('form-file');
 //     document.getElementById('label-file').innerHTML =  thefile.value; }
+
