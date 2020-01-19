@@ -100,9 +100,11 @@
 .success-checkmark {
   width: 80px;
   height: 115px;
-  // margin: 0 auto;
   margin-bottom: 20px;
   transform: scale(1.5);
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 30px;
+  }
   .check-icon {
       width: 80px;
       height: 80px;

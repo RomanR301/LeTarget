@@ -3,8 +3,8 @@
 
 .pagination {
   margin: 0 0 130px 0;
-  @media (max-width: $breakpoint-sm) {
-    // margin: 12px 0 12px 0;
+  @media (max-width: $breakpoint-md) {
+    margin: 0 0 75px 0;
   }
   & .current {
     color: $bodyBackground; 
@@ -19,9 +19,9 @@
     transform: rotate(180deg);
   }
   &-desktop {
-    @media (max-width: $breakpoint-md) {
-      display: none;
-    }
+    // @media (max-width: $breakpoint-md) {
+    //   display: none;
+    // }
   }
   &-mobile {
     display: none;
@@ -45,6 +45,12 @@
   color: $whiteColor;
   @include transition(.3);
   border: 1px solid transparent;
+  @media (max-width: $breakpoint-md) {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
   &:hover {
     border: 1px solid $whiteColor;
     background: transparent;

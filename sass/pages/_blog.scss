@@ -1,10 +1,31 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.blog {
+  @media (max-width: $breakpoint-lg) {
+    .page-title {
+      display: none;
+    }
+    .categories-list {
+      margin: 90px 0 30px 0;
+      &__item {
+        margin: 12px;
+      }
+    }
+  }
+}
+
 .blog-item {
-  margin-bottom: 80px;
+  height: 100%;
+  justify-content: space-between;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__image {
     margin-bottom: 25px;
+    height: 300px;
   }
   &__info {
     font-size: 12px;
@@ -34,10 +55,10 @@
   &__title {
     margin-bottom: 16px;
     text-align: center;
-    max-width: 80%;
     & a {
       position: relative;
       padding: 4px;
+      font-weight: bold;
       text-align: center;
       color: $whiteColor;
       @include transition(.3);
@@ -49,6 +70,9 @@
         background: $whiteColor;
       }
     }
+  }
+  &__description {
+    @include text-ellipsis(3);
   }
 }
 

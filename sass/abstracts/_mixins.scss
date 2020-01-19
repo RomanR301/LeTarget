@@ -5,19 +5,12 @@
   transition: all $time + 0s ease-out;
 }
 
-@function get-vw($target) { 
-  $vw-context: (1320*.01) * 1px;
-  @return ($target/$vw-context) * 1vw;
-}
-
-@function get-vh($target) { 
-  $vh-context: (665*.01) * 1px;
-  @return ($target/$vh-context) * 1vh;
-}
-
-@function get-vmax($target) { 
-  $vw-context: (1320*.01) * 1px;
-  @return ($target/$vw-context) * 1vmax;
+@mixin text-ellipsis($strokes) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $strokes;
+  -webkit-box-orient: vertical;
 }
 
 @mixin grid-size($size) {

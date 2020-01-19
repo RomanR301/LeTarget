@@ -36,6 +36,7 @@
     color: $whiteColor;
     @include fontSize(18, 16);
     line-height: 1.333;
+    display: block;
     cursor: pointer;
   }
 }

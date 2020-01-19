@@ -48,7 +48,11 @@
 
 // 404, thankyou page
 .other-page {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 104px);
+  margin-top: 50px;
+  @media (max-width: $breakpoint-md) {
+    height: calc(100vh - 50px);
+  }
   &.error-page {
     & .other-page__heading {
       font-family: 'Roboto';
@@ -109,6 +113,11 @@
           width: 100%;
         }
       }
+      &.active {
+        &:after {
+          width: 100%;
+        }
+      }
     }
     &__counter {
       position: absolute;
@@ -124,7 +133,17 @@
 
 .copyright {
   padding: 15px 0;
+  @media (max-width: $breakpoint-md) {
+    &-company {
+      text-align: center;
+      margin-top: 50px;
+    }
+    & .row {
+      flex-direction: column-reverse;
+    }
+  }
   &-list {
+    display: flex;
     &__item {
       margin-right: 20px;
       position: relative;
@@ -143,9 +162,16 @@
           width: 100%;
         }
       }
+      &:last-child {
+        margin: 0;
+      }
     }
-    &__item:last-child {
-      margin: 0;
+    @media (max-width: $breakpoint-md) {
+      flex-flow: column;
+      align-items: center;
+      &__item {
+        margin: 0 0 10px 0;
+      }
     }
   }
   &.mobile {

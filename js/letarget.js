@@ -4,8 +4,6 @@ let front = {
   nav: $('.navbar'),
   callbackPopup: $('.callback-popup'),
   briefPopup: $('.brief-popup'),
-  filterGridBtn: $('.filter-grid__btn'),
-  header_drop: $('.header-drop'),
   slider_options_default: {
       wrapAround: true,
       pageDots: false,
@@ -312,3 +310,37 @@ document.getElementById("uploadBtn").onchange = function () {
 //     var thefile = document.getElementById('form-file');
 //     document.getElementById('label-file').innerHTML =  thefile.value; }
 
+
+
+document.addEventListener("DOMContentLoaded", function (event) {
+
+    let childrenItem = document.querySelectorAll('.hasSubMenu > a');
+    for (let i = 0; i < childrenItem.length; i++) {
+        var btn = document.createElement("BUTTON");   // Create a <button> element
+        btn.className = "nav-btn";                    // add class
+        btn.innerHTML = `<i class="icon-arrow-big"></i>`;
+        childrenItem[i].appendChild(btn);
+    }
+});
+
+$(document).on('click', '.nav-btn', function (e) {
+    e.preventDefault();
+    var navTitle = document.createElement("p");
+
+    navTitle.className = "nav-title";        
+    navTitle.innerHTML = '<i class="icon-cheveron-left"></i>' + $(this).parent().text();
+    $(this).parent().next('.sub-menu').prepend(navTitle);
+    if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {
+        $(this).parent().next('.sub-menu').addClass('menuOpen');
+    } else {
+        $(this).parent().next('.sub-menu').removeClass("menuOpen");
+    }
+});
+
+$(document).on('click', '.nav-title', function (e) {
+    e.preventDefault();
+    if ($(this).parent().hasClass('menuOpen')) {
+        $(this).parent().removeClass("menuOpen");
+        $(this).remove();
+    }
+});

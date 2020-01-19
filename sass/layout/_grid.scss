@@ -1,6 +1,14 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+// * {
+//   outline: .5px solid rgba(255, 0, 0, .3);
+// }
+
+body, html {
+  outline: 3px solid blue;
+}
+
 .container {
   max-width: 1170px;
   margin: auto;
@@ -72,6 +80,14 @@
 .mb-40 {
   margin-bottom: 40px;
 }
+
+.mb-60 {
+  margin-bottom: 60px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 30px;
+  }
+}
+
 .column {
   padding: 0 15px;
   position: relative;
@@ -121,6 +137,12 @@
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  @media (max-width: $breakpoint-md) {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .align-left {
