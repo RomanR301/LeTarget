@@ -1355,6 +1355,7 @@ h3, h4, h5, h6 {
 
 .popup-content {
   flex-grow: 1;
+  -webkit-flex-grow: 1;
 }
 
 .popup-close {
@@ -1601,6 +1602,12 @@ h3, h4, h5, h6 {
   width: 70%;
 }
 
+@media (max-width: 767px) {
+  .form-control-file {
+    width: 100%;
+  }
+}
+
 .form-checkbox {
   position: relative;
   margin-bottom: 20px;
@@ -1696,8 +1703,26 @@ h3, h4, h5, h6 {
   margin-bottom: 50px;
 }
 
+@media (max-width: 767px) {
+  .brief-heading {
+    margin: 20px 0 36px 0;
+  }
+}
+
 .brief-checkboxes {
   margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .brief-checkboxes {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .brief-radios {
+    width: 100%;
+  }
 }
 
 .brief-popup .flickity-prev-next-button {
@@ -1707,6 +1732,10 @@ h3, h4, h5, h6 {
 
 .item-wrap {
   height: 100%;
+}
+
+.carousel-status {
+  padding-bottom: 40px;
 }
 
 .brief-carousel .carousel-item {
@@ -1904,6 +1933,7 @@ h3, h4, h5, h6 {
 
 .m-row {
   margin: 0 -15px;
+  width: unset;
 }
 
 @media (max-width: 575px) {
@@ -2004,15 +2034,6 @@ h3, h4, h5, h6 {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-}
-
-@media (max-width: 767px) {
-  .align-right {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
 }
 
 .align-left {

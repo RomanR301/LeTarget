@@ -49,6 +49,7 @@
 
 .m-row {
   margin: 0 -15px;
+  width: unset;
   @media (max-width: $breakpoint-sm) {
     margin: 0 !important;
   }
@@ -137,12 +138,12 @@
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  @media (max-width: $breakpoint-md) {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
+  // @media (max-width: $breakpoint-md) {
+  //   -webkit-box-pack: center;
+  //   -webkit-justify-content: center;
+  //   -ms-flex-pack: center;
+  //   justify-content: center;
+  // }
 }
 
 .align-left {

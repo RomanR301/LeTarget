@@ -27,6 +27,7 @@
   }
   &-content {
     flex-grow: 1;
+    -webkit-flex-grow: 1;
   }
   &-close {
     position: relative;
