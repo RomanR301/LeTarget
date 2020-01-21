@@ -1,19 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.blog {
-  @media (max-width: $breakpoint-lg) {
-    .page-title {
-      display: none;
-    }
-    .categories-list {
-      margin: 90px 0 30px 0;
-      &__item {
-        margin: 12px;
-      }
-    }
-  }
-}
 
 .blog-item {
   height: 100%;
@@ -86,6 +73,7 @@
 .articles-carousel-wrap {
   position: relative;
   height: 540px;
+  overflow: hidden;
 }
 
 .carousel-control {
@@ -122,9 +110,10 @@
   }
 }
 
-
-
-.abs {
-  position: absolute;
-  right: 0;
+.scroll-box {
+  max-width: 3000px;
+  overflow-x: scroll;
+  border: 2px solid #000;
+  margin-bottom: 20px;
+  display: flex;
 }

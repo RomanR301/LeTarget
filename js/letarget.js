@@ -314,7 +314,7 @@ document.getElementById("uploadBtn").onchange = function () {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    let childrenItem = document.querySelectorAll('.hasSubMenu > a');
+    let childrenItem = document.querySelectorAll('.menu-item-has-children > a');
     for (let i = 0; i < childrenItem.length; i++) {
         var btn = document.createElement("BUTTON");   // Create a <button> element
         btn.className = "nav-btn";                    // add class

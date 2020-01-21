@@ -117,8 +117,14 @@
   &-list {
     justify-content: space-around;
     margin-bottom: 60px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0 0 30px 0;
+    }
     &__item {
       position: relative;
+      @media (max-width: $breakpoint-lg) {
+        margin: 12px;
+      }
     }
     &__link {
       color: #EFEFEF;
