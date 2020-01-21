@@ -74,6 +74,7 @@
   position: relative;
   height: 540px;
   overflow: hidden;
+  margin-bottom: 130px;
 }
 
 .carousel-control {
@@ -89,31 +90,82 @@
 }
 .articles-button {
   cursor: pointer;
-  background: red;
-  & i {
-    &:before {
-      display: block;
-      color: $greyColor;
-      @include transition(.3);
-    }
-    &:hover {
-      &:before {
-        color: $whiteColor;
-      }
-    }
+  &:before {
+    display: block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'icomoon';
+    content: "\e901";
+    color: $greyColor;
+    @include transition(.3);
   }
   &.prev-btn {
-    margin-right: 30px;
-    & i:before {
+    margin-right: 20px;
+    &:before {
       transform: rotate(180deg);
+    }
+  }
+  &:hover {
+    &:before {
+      color: $whiteColor;
     }
   }
 }
 
 .scroll-box {
-  max-width: 3000px;
+  max-width: 9999px;
   overflow-x: scroll;
-  border: 2px solid #000;
-  margin-bottom: 20px;
   display: flex;
+  height: 540px;
+  position: relative;
+  &-container {
+    position: absolute;
+    right: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      // background: 
+      // background: linear-gradient(90deg, #030303 0%, rgba(3, 3, 3, 0.7) 52.6%, rgba(3, 3, 3, 0) 100%);
+    }
+  }
+  &-item {
+    position: relative;
+    min-width: 370px;
+  }
+  &__inner {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 30px;
+
+  }
+  &__image {
+    height: 100%;
+    opacity: 0.5;
+  }
+  &__date {
+    background: #000;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 8px 10px 0;
+    display: inline-block;
+  }
+  & .blog-item__title {
+    margin-bottom: 10px;
+    & a {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &__description {
+    @include text-ellipsis(3);
+  }
 }

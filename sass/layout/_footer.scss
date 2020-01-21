@@ -11,12 +11,13 @@
     }
   }
   & .section-title {
+    margin-top: 130px;
     @media (max-width: $breakpoint-lg) {
       width: 100%;
       text-align: center;
     }
     @media (max-width: $breakpoint-md) {
-      margin-bottom: 50px;
+      margin: 60px 0 50px 0;
     }
   }
   &-title {
