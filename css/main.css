@@ -3646,6 +3646,15 @@ h3, h4, h5, h6 {
   position: relative;
 }
 
+.scroll-box ::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.scroll-box {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
 .scroll-box-container {
   position: absolute;
   right: 0;
