@@ -54,7 +54,7 @@ img {
   @include fontSize(20, 48);
   line-height: 1.125;
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 80;
+  margin-bottom: 80px;
   @media (max-width: $breakpoint-md) {
     margin-bottom: 20px;
   }

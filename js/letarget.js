@@ -118,6 +118,13 @@ let front = {
       $(document).on('click', '.popup-close', function() {
         $('.popup').removeClass('open');
       });
+    //   $(".services-column:nth-child(1) .home-services__item").attr('data-rellax-speed', '2');
+    //   $(".services-column:nth-child(2) .home-services__item").attr('data-rellax-speed', '0.5');
+    //   $(".services-column:nth-child(3) .home-services__item").attr('data-rellax-speed', '1.5');
+    //   $(".services-column:nth-child(4) .home-services__item").attr('data-rellax-speed', '2');
+    //   $(".services-column:nth-child(5) .home-services__item").attr('data-rellax-speed', '0.5');
+    //   $(".services-column:nth-child(6) .home-services__item").attr('data-rellax-speed', '1.5');
+
     //   $(document).on('click', '.header-nav__link', function (e) {
     //       e.preventDefault();
     //       console.log($(window).width());
@@ -210,17 +217,6 @@ jQuery(function () {
   front.init();
   modal.init();
 
-
-  // Hide Header on on scroll down
-//   let didScroll;
-//   let lastScrollTop = 0;
-//   let delta = 5;
-// //   let navbarHeight = $('.header').outerHeight();
-
-//   $(window).scroll(function (event) {
-//       didScroll = true;
-//   });
-
   $(window).scroll(function(){
       $('.parallax-image').each(function(){
             if ($(this).offset().top < $(window).scrollTop()) {
@@ -233,37 +229,6 @@ jQuery(function () {
         }
       });
   });
-
-//   setInterval(function () {
-//       if (didScroll) {
-//           hasScrolled();
-//           didScroll = false;
-//       }
-//   }, 250);
-
-//   function hasScrolled() {
-//       let st = $(this).scrollTop();
-
-//       // Make sure they scroll more than delta
-//       if (Math.abs(lastScrollTop - st) <= delta)
-//           return;
-
-//       // If they scrolled down and are past the navbar, add class .nav-up.
-//       // This is necessary so you never see what is "behind" the navbar.
-//       if (st > lastScrollTop && st > navbarHeight) {
-//           // Scroll Down
-//           $('.header').removeClass('--down').addClass('--up');
-//       } else {
-//           // Scroll Up
-//           if (st + $(window).height() < $(document).height()) {
-//               $('.header').removeClass('--up').addClass('--down');
-//           }
-//       }
-
-//       lastScrollTop = st;
-//   }
-
-
 });
 
 $(function () {
@@ -278,38 +243,11 @@ $(function () {
     $("#uploadBtn").click(function() {
         $('#uploadFile').addClass("has-content");
     })
-
-    
-//   let detectInview = function () {
-//       let wh = $(window).height();
-//       let scrollTop = $(window).scrollTop();
-
-//       $('.detect-inview').each(function () {
-//           let el = $(this);
-//           if (el.offset().top - wh + 300 <= scrollTop && scrollTop <= el.offset().top + el.height()) {
-//               el.addClass('to-animate');
-
-//           } else {
-//               el.removeClass('to-animate');
-//           }
-//       });
-
-//   }
-//   detectInview();
-//   $(window).on('scroll', function () {
-//       detectInview();
-//   });
 });
 
 document.getElementById("uploadBtn").onchange = function () {
     document.getElementById("uploadFile").value = this.value.replace("C:\\fakepath\\", "");
 };
-
-
-// function alertFilename() {
-//     var thefile = document.getElementById('form-file');
-//     document.getElementById('label-file').innerHTML =  thefile.value; }
-
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -345,3 +283,24 @@ $(document).on('click', '.prev-page', function (e) {
         $(this).parent().parent().removeClass('show');
     }
 });
+
+$(".services-column:nth-child(1) .home-services__item").attr('data-rellax-speed', '2');
+$(".services-column:nth-child(2) .home-services__item").attr('data-rellax-speed', '0.5');
+$(".services-column:nth-child(3) .home-services__item").attr('data-rellax-speed', '1.5');
+$(".services-column:nth-child(4) .home-services__item").attr('data-rellax-speed', '2');
+$(".services-column:nth-child(5) .home-services__item").attr('data-rellax-speed', '0.5');
+$(".services-column:nth-child(6) .home-services__item").attr('data-rellax-speed', '1.5');
+
+var rellax = new Rellax('.rellax', {
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+});
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+    rellax.destroy();
+  }
+
+

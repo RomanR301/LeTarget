@@ -39,3 +39,136 @@
    }
   }
 }
+
+.home-services {
+  height: 200vh;
+  margin-top: 40vh;
+  @media (max-width: $breakpoint-md) {
+    height: auto;
+    margin-top: 0;
+  }
+  &__heading {
+    @include fontSize(20, 48);
+    line-height: 1.125;
+    font-family: 'Roboto', sans-serif;
+    @media (max-width: $breakpoint-md) {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__item {
+    height: 500px;
+    border: 2px solid #fff;
+    @include transition(.3);
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      background: $whiteColor;
+      color: $bodyBackground;
+      & .home-services {
+        &__counter {
+          span {
+            color: $bodyBackground;
+            &:before {
+              color: $bodyBackground
+            }
+          }
+        }
+        &__info {
+          &_title {
+            padding-bottom: 10px;
+          }
+          &_description {
+            & .content {
+              margin-bottom: 0;
+            }
+          }
+        }
+        &__abbreviation {
+          opacity: 1;
+          right: -14px;
+        }
+      }
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+  }
+  &__counter {
+    & span {
+      display: block;
+      color: $whiteColor;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: bold;
+      @include transition(.3);
+      &.counter-arrow {
+        &:before {
+          font-family: 'icomoon';
+          content: "\e902";
+          color: #fff;
+          display: block;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__abbreviation {
+    position: absolute;
+    top: -14px;
+    line-height: 1;
+    right: -100%;
+    font-size: 120px;
+    z-index: -1;
+    font-weight: bold;
+    color: #EEEEEE;
+    opacity: 0;
+    @include transition(.3);
+  }
+  &__info {
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    &_title {
+      @media (max-width: $breakpoint-md) {
+        padding-bottom: 10px;
+      }
+    }
+    &_description {
+      overflow: hidden;
+      & .content {
+        @include transition(.3);
+        margin-bottom: -100%;
+      }
+    }
+  }
+}
+
+.home-services {
+  @media (max-width: $breakpoint-md) {
+    &__item {
+      height: 322px;
+      &:hover {
+        background: $bodyBackground;
+        & .home-services__counter  span {
+          color: $whiteColor;
+          &:before {
+            color: $whiteColor;
+          }
+        }
+      }
+      & .home-services__info_description .content {
+        margin-bottom: 0;
+      }
+    }
+    &__abbreviation {
+      display: none;
+    }
+    &__link {
+      color: $whiteColor;
+    }
+  }
+}
