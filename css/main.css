@@ -4158,4 +4158,121 @@ h3, h4, h5, h6 {
     height: 300px;
   }
 }
+
+.product-primary-screen {
+  height: calc(100vh - 50px);
+}
+
+.primary__images {
+  position: absolute;
+  top: -150px;
+  right: -150px;
+}
+
+.primary__images--overflow {
+  width: 860px;
+}
+
+.primary__image {
+  height: 40vh;
+  width: 35vw;
+  overflow: visible;
+}
+
+.primary__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.6) scaleZ(0.7) rotateX(-16deg) rotateY(-16deg) rotateZ(91deg) translateX(23px) translateZ(136px) skewX(-33deg);
+  object-fit: cover;
+}
+
+.primary__image__container {
+  position: absolute;
+  transform: rotate(-70deg);
+}
+
+.primary__image__container:nth-child(1) {
+  top: 25vh;
+  right: 24vw;
+  z-index: 4;
+}
+
+.primary__image__container:nth-child(2) {
+  top: 41vh;
+  right: 4vw;
+}
+
+.primary__image__container:nth-child(3) {
+  right: 36vw;
+  top: 36vh;
+}
+
+.primary__image__container:nth-child(4) {
+  top: 56vh;
+  right: 19vw;
+}
+
+.primary__image__container:nth-child(5) {
+  top: 58vh;
+  right: -18vw;
+}
+
+.primary__image__container:nth-child(6) {
+  top: 72vh;
+  right: -2vw;
+  height: 45vh;
+}
+
+.development-list__item {
+  width: 20%;
+}
+
+.development-list__item.active .development__item__number:before {
+  color: #ffffff;
+}
+
+.development-list__item.active .development__item__content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.development-list .development__item__number {
+  background: #131313;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  padding: .9375rem 0 1.875rem;
+}
+
+.development-list .development__item__number:before {
+  content: counter(iteme);
+  counter-increment: iteme;
+  color: #777777;
+  font-size: 15.625rem;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  z-index: 3;
+  left: -3.75rem;
+  transition: left .4s;
+}
+
+.development-list .development__item__content {
+  padding: 3.75rem .3125rem 1.875rem;
+  width: 100%;
+  background-color: #fff;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 100%;
+  visibility: hidden;
+  z-index: 2;
+  color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+}
 /*# sourceMappingURL=main.css.map */

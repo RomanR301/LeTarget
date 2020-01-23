@@ -1,0 +1,126 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.product-primary-screen {
+  height: calc(100vh - 50px);
+}
+.primary__images {
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  &--overflow {
+    // position: relative;
+    width: 860px;
+    // display: -webkit-box;
+    // display: -webkit-flex;
+    // display: -ms-flexbox;
+    // display: flex;
+    // -webkit-flex-wrap: wrap;
+    // -ms-flex-wrap: wrap;
+    // flex-wrap: wrap;
+    // -webkit-box-pack: start;
+    // -webkit-justify-content: flex-start;
+    // -ms-flex-pack: start;
+    // justify-content: flex-start;
+  }
+}
+
+.primary__image {
+  height: 40vh;
+  width: 35vw;
+  overflow: visible;
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.6) scaleZ(0.7) rotateX(-16deg) rotateY(-16deg) rotateZ(91deg) translateX(23px) translateZ(136px) skewX(-33deg);
+    object-fit: cover;
+  }
+  &__container {
+    position: absolute;
+    transform: rotate(-70deg); 
+    &:nth-child(1) {
+      top: 25vh;
+      right: 24vw;
+      z-index: 4;
+    }
+    &:nth-child(2){
+      top: 41vh;
+      right: 4vw;
+    }
+    &:nth-child(3){
+      right: 36vw;
+      top: 36vh;
+    }
+    &:nth-child(4){
+      top: 56vh;
+      right: 19vw;  
+    }
+    &:nth-child(5){
+      top: 58vh;
+      right: -18vw;
+    }
+    &:nth-child(6){
+      top: 72vh;
+      right: -2vw;
+      height: 45vh;
+    }
+  }
+}
+
+.development {
+  &-list {
+
+    &__item {
+      width: 20%;
+      &.active {
+        .development__item__number {
+          &:before {
+            color: $whiteColor;
+          }
+        }
+        & .development__item__content {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    & .development__item__number {
+      background: #131313;
+      position: relative;
+      width: 100%;
+      cursor: pointer;
+      padding: .9375rem 0 1.875rem;
+      // overflow: hidden;
+      &:before {
+        content: counter(iteme);
+        counter-increment: iteme;
+        color: $greyColor;
+        font-size: 15.625rem;
+        font-weight: 700;
+        line-height: 1;
+        position: relative;
+        z-index: 3;
+        left: -3.75rem;
+        transition: left .4s;
+      }
+    }
+    & .development__item__content {
+      padding: 3.75rem .3125rem 1.875rem;
+      width: 100%;
+      background-color: #fff;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      top: 100%;
+      visibility: hidden;
+      z-index: 2;
+      color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.25rem;
+    }
+  }
+}

@@ -264,7 +264,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 $(document).on('click', '.nav-btn', function (e) {
     e.preventDefault();
     var navTitle = document.createElement("p");
+    // var goBack = document.createElement("li");
     navTitle.className = "nav-title";        
+    // goBack.innerHTML = "123";
+    // goBack.className = "prev-page";
+    // goBack.innerHTML = `<i class="icon-arrow-big"></i> Назад`
     navTitle.innerHTML = $(this).parent().text();
     $(this).parent().next('.sub-menu').prepend(navTitle);
     if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {
@@ -274,6 +278,7 @@ $(document).on('click', '.nav-btn', function (e) {
         $(this).parent().next('.sub-menu').removeClass("menuOpen");
     }
 });
+
 
 $(document).on('click', '.prev-page', function (e) {
     e.preventDefault();
@@ -291,16 +296,33 @@ $(".services-column:nth-child(4) .home-services__item").attr('data-rellax-speed'
 $(".services-column:nth-child(5) .home-services__item").attr('data-rellax-speed', '0.5');
 $(".services-column:nth-child(6) .home-services__item").attr('data-rellax-speed', '1.5');
 
+$(".primary__image__container:nth-child(1) .primary__image").attr('data-rellax-speed', '10');
+$(".primary__image__container:nth-child(2) .primary__image").attr('data-rellax-speed', '7');
+$(".primary__image__container:nth-child(3) .primary__image").attr('data-rellax-speed', '9');
+$(".primary__image__container:nth-child(4) .primary__image").attr('data-rellax-speed', '9');
+$(".primary__image__container:nth-child(5) .primary__image").attr('data-rellax-speed', '8');
+$(".primary__image__container:nth-child(6) .primary__image").attr('data-rellax-speed', '8');
+
+
+
+
+var rellax = new Rellax('.rellax-main', {
+    round: true,
+    vertical: true,
+    horizontal: false
+});
+
+
 var rellax = new Rellax('.rellax', {
     center: false,
     wrapper: null,
     round: true,
     vertical: true,
     horizontal: false
-});
+  });
 
 if (window.matchMedia("(max-width: 767px)").matches) {
     rellax.destroy();
-  }
+  } 
 
 
