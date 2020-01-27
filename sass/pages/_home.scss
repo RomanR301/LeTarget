@@ -67,6 +67,7 @@
       color: $bodyBackground;
       & .home-services {
         &__counter {
+          z-index: 2;
           span {
             color: $bodyBackground;
             &:before {
@@ -87,6 +88,7 @@
         &__abbreviation {
           opacity: 1;
           right: -14px;
+          z-index: 1;
         }
       }
     }

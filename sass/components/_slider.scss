@@ -1,0 +1,39 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.slider {
+  margin: 130px 0;
+}
+
+.carousel {
+  &__item {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: center;
+      // width: 170px;
+      width: 100%;
+    }
+    & img {
+      display: block;
+      padding: 15px;
+      width: 170px;
+      height: 170px;
+      @media (max-width: $breakpoint-md) {
+        // width: 90vw;
+        // height: unset;
+        width: 130px;
+        height: 130px;
+        &:first-child {
+          // margin-right: auto;
+        }
+        &:last-child {
+          // margin-left: auto;
+        }
+      }
+      // object-fit: cover;
+    }
+  }
+}

@@ -26,9 +26,6 @@ jQuery(function () {
         }
       }
   }
-
-  
-
   var prevButton = document.querySelector('.prev-brief');
     prevButton.addEventListener( 'click', function() {
     $briefSlider.previous();
@@ -39,48 +36,36 @@ jQuery(function () {
   });
   $briefSlider.on( 'change', updateStatus );
 
+
+  let technologiesSlider = document.querySelector('.technologies-carousel') !== null;
+  var $technologiesCarousel;
+  if (technologiesSlider & matchMedia('screen and (min-width: 768px)').matches ) {
+      $technologiesCarousel = front.newSlider('.technologies-carousel', {
+        cellAlign: 'left',
+        pageDots: true,
+        wrapAround: false,
+        prevNextButtons: false,
+        groupCells: 5
+      });
+  } else {
+    $technologiesCarousel = front.newSlider('.technologies-carousel', {
+      cellAlign: 'center',
+      pageDots: false,
+      wrapAround: false,
+      prevNextButtons: true,
+      groupCells: 1
+  });
+  }
+
+
+  let teamSlider = document.querySelector('.team-carousel') !== null;
+  var $teamCarousel;
+  if (teamSlider) {
+      $teamCarousel = front.newSlider('.team-carousel', {
+        cellAlign: 'center',
+        pageDots: false,
+        wrapAround: true,
+        prevNextButtons: true,
+      });
+  }
 });
-
-// $(function(){
-// 	var owl = $('.owl-carousel.brief');
-// 	owl.owlCarousel({
-// 	 /* loop: true,*/
-//         margin: 10,
-//         autoplay: false,
-//         autoplayTimeout: 7000,
-//         transitionStyle: "fade",
-//         autoplayHoverPause: true,
-// 		items: 1,
-// 		 touchDrag: false,
-//         mouseDrag: false,
-// 		nav: false,
-//         dots: false,
-// 		navText: ["", ""],
-// 	  onInitialized  : counter, //When the plugin has initialized.
-// 	  onTranslated : counter //When the translation of the stage has finished.
-// 	});
-	
-// 	function counter(event) {
-// 	   var element   = event.target;         // DOM element, in this example .owl-carousel
-// 		var items     = event.item.count;     // Number of items
-// 		var item      = event.item.index + 1;     // Position of the current item
-
-//         if(item == 1){
-//             $('#briefForm a.btn.prev-brief').fadeOut(300);
-//         }else{
-//             $('#briefForm a.btn.prev-brief').fadeIn(300);           
-//         }
-
-//         console.log('item number = '+item);
-
-// 	  $('#counterBrief').html(item+" / "+items)
-// 	};
-// 	// Custom Navigation Events
-// 		$(".next-brief").click(function(){
-		
-// 			owl.trigger('next.owl.carousel');
-// 		});
-// 		$(".prev-brief").click(function(){
-// 			owl.trigger('prev.owl.carousel');
-// 		});
-// })

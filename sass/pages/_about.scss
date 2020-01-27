@@ -1,0 +1,123 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.about {
+  margin-top: 200px;
+  height: 100vh;
+  @media (max-width: $breakpoint-lg) {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  &-block {
+    position: relative;
+    & h2 {
+      padding-bottom: 24px;
+      @media (max-width: $breakpoint-lg) {
+        text-align: center;
+      }
+    }
+    & img {
+      position: absolute;
+      z-index: -1;
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+      &:nth-child(1) {
+        left: -130px;
+        top: -80px;
+      }
+      &:nth-child(2) {
+        top: -250px;
+        right: -120px;
+      }
+      &:nth-child(3) {
+        right: -225px;
+        bottom: -260px;
+      }
+    }
+  }
+  &-team {
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 100px;
+    }
+  }
+  &-carousel {
+    &__heading {
+      font-size: 16px;
+      line-height: 21px;
+      color: #EFEFEF;
+    }
+  }
+}
+
+
+
+.team {
+  &-carousel {
+    width: 100%;
+    & .flickity-prev-next-button {
+      &:after {
+        font-size: 16px;
+      }
+      &:hover {
+        background: $whiteColor;
+        border-radius: 100px;
+        &:after {
+          color: #333;
+        }
+      }
+
+    }
+  }
+  &__item {
+    width: 25%;
+    @media (max-width: $breakpoint-md) {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &--title {
+      margin-bottom: 30px;
+      min-height: 140px;
+      justify-content: center;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 0;
+      }
+    }
+    &--name {
+      font-weight: bold;
+      @include fontSize (24, 40);
+      line-height: 1.2;
+      margin: 0 0 10px 0;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(.3);
+    }
+    &--position {
+      @include fontSize (14, 16);
+      line-height: 21px;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(.3);
+    }
+    &--image {
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+        @media (max-width: $breakpoint-md) {
+          width: 180px;
+          height: 250px;
+        }
+      }
+    }
+    &.is-selected {
+      & .team__item--name, & .team__item--position {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

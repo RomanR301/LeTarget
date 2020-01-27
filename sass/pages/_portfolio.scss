@@ -4,6 +4,12 @@
 .portfolio {
   &-item {
     position: relative;
+    &__image {
+      height: 350px;
+      @media (max-width: $breakpoint-md) {
+        height: auto;
+      }
+    }
     &-hover {
       top: 50%;
       left: 50%;
@@ -133,6 +139,18 @@
         text-align: center;
         border: 1px solid #fff;
         border-radius: 100%;
+      }
+    }
+    &.--modified {
+      & li {
+        color: $greyColor;
+        &:before {
+          color: $whiteColor;
+        }
+        & span {
+          color: $whiteColor;
+          font-weight: bold;
+        }
       }
     }
   }

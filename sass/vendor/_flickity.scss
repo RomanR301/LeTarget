@@ -44,16 +44,15 @@
 
 .flickity-prev-next-button {
   position: absolute;
-  bottom: 0;
+  bottom: -60px;
   width: 40px;
   height: 40px;
   margin: 0 10px;
   cursor: pointer;
   border: 0;
   outline: none;
-  // // background: rgba(183, 129, 49, 0.1);
-  // background: rgba(183, 129, 49, 1);
   border-radius: 100px;
+  background: transparent;
   @include transition(0.3);
 
   &:focus {
@@ -73,41 +72,30 @@
 
   &.previous, &.next {
     &:after {
-      content: "";
+      content: "\e901";
       @include transition(.3);
-    }
-
-    &:hover {
-      // background: $darkYellowColor;
-
-      &:after {
-        // color: rgba(183, 129, 49, 0.1);
-        color: rgba(183, 129, 49, 1);
-      }
+      font-size: 20px;
     }
   }
 
   &.previous {
     right: 50%;
-
-    &:before {
-      content: "\e928";
+    &:after {
+      display: block;
       color: #fff;
+      transform: rotate(-180deg);
+      display: block;
+      
     }
   }
 
   &.next {
     left: 50%;
-
-    &:after {
-      content: "\e902";
-    }
-
   }
 }
 
 .flickity-page-dots {
-  position: absolute;
+  position: static;
   max-width: 1110px;
   margin: auto;
   width: 100%;
@@ -120,18 +108,19 @@
   text-align: center;
   line-height: 1;
   transition: all 0.3s ease;
+  
   @media(min-width: $breakpoint-sm) {
     bottom: 35px;
   }
 
   .dot {
     position: relative;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #777777;
+    border-radius: 100px;
     display: inline-block;
     cursor: pointer;
-    background: rgba(47, 78, 116, 0.5);
     @include transition(.3);
 
     &:before {
@@ -142,22 +131,17 @@
       transform: translate(-50%, -50%);
       width: 19px;
       height: 19px;
-      border-radius: 100%;
-      // border: 1px solid $accentColor;
       opacity: 0;
       @include transition(0.3);
     }
 
-    &:hover {
-      // background-color: $accentColor;
-    }
-
     & + .dot {
-      margin-left: 30px;
+      margin-left: 6px;
     }
 
     &.is-selected {
-      // background-color: $accentColor;
+      width: 27px;
+      background: $whiteColor;
 
       &:before {
         content: '';
