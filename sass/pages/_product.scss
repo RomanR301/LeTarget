@@ -210,3 +210,58 @@
     }
   }
 }
+
+
+// Product table  
+.product-table {
+  margin-top: 130px;
+  & table, td, td, th {
+    border: 1px inset $whiteColor;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  & table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    // border: 1px solid $whiteColor;
+  }
+  & thead {
+    & th {
+      background: $whiteColor;
+      color: #333;
+      padding: 18px 6px;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 500;
+      text-align: center;
+      border-left: 1px solid #333;
+      &:first-child {
+        border: none;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+  }
+  & .table-heading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  & th, td {
+    padding: 16px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  & th {
+    text-align: left;
+  }
+  & span {
+    &:before {
+      font-family: 'icomoon';
+      content: "\e900";
+      font-size: 16px;
+    }
+  }
+}
