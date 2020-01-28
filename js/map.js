@@ -11,7 +11,7 @@ features: [{
 type: 'Feature',
 geometry: {
   type: 'Point',
-  coordinates: [24.0194, 49.8145]
+  coordinates: [24.0195, 49.81455]
 },
 properties: {
   title: 'Mapbox',
