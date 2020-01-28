@@ -2,6 +2,18 @@
 @import "../abstracts/variables";
 
 .contacts {
+  height: 100vh;
+  background: transparent;
+  &:before {
+    content: '';
+    background: linear-gradient(90deg, #030303 21.65%, rgba(3, 3, 3, -.8) 100%);
+    position: absolute;
+    left: 40%;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 9;
+  }
   &-heading {
     margin: 66px 0 40px 0;
   }
@@ -11,4 +23,32 @@
   & .footer-section {
     margin: 50px 0 0 0;
   }
+  & .copyright {
+    z-index: 99;
+  }
+}
+
+.header-contacts {
+  background: transparent;
+}
+
+
+#map {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: all;
+  background: transparent;
+}
+
+.marker {
+  background-image: url('../../img/map-marker.svg');
+  background-size: cover;
+  width: 46px;
+  height: 57px;
+  // border-radius: 50%;
+  cursor: pointer;
 }

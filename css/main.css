@@ -2036,6 +2036,12 @@ h3, h4, h5, h6 {
   margin: 130px 0;
 }
 
+@media (max-width: 767px) {
+  .slider {
+    margin: 60px 0;
+  }
+}
+
 .carousel__item {
   width: 20%;
   display: flex;
@@ -2064,13 +2070,17 @@ h3, h4, h5, h6 {
   }
 }
 
+.about-us-slider {
+  margin-bottom: 100px;
+}
+
 .seo {
   margin: 130px 0 0 0;
 }
 
 @media (max-width: 575px) {
   .seo {
-    margin-top: 4px;
+    margin-top: 60px;
   }
 }
 
@@ -2081,6 +2091,13 @@ h3, h4, h5, h6 {
   font-size: calc(28px + (48 - 28) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.125;
   margin-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+  .seo-component h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .seo-component .entry-content {
@@ -3868,6 +3885,22 @@ h3, h4, h5, h6 {
   }
 }
 
+.contacts {
+  height: 100vh;
+  background: transparent;
+}
+
+.contacts:before {
+  content: '';
+  background: linear-gradient(90deg, #030303 21.65%, rgba(3, 3, 3, 0) 100%);
+  position: absolute;
+  left: 40%;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 9;
+}
+
 .contacts-heading {
   margin: 66px 0 40px 0;
 }
@@ -3878,6 +3911,33 @@ h3, h4, h5, h6 {
 
 .contacts .footer-section {
   margin: 50px 0 0 0;
+}
+
+.contacts .copyright {
+  z-index: 99;
+}
+
+.header-contacts {
+  background: transparent;
+}
+
+#map {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: all;
+  background: transparent;
+}
+
+.marker {
+  background-image: url("../../img/map-marker.svg");
+  background-size: cover;
+  width: 46px;
+  height: 57px;
+  cursor: pointer;
 }
 
 .blog-item {
@@ -4681,9 +4741,25 @@ h3, h4, h5, h6 {
   bottom: -260px;
 }
 
+.about-team {
+  height: 100vh;
+}
+
 @media (max-width: 991px) {
   .about-team {
     margin-bottom: 100px;
+    height: auto;
+  }
+}
+
+.about-services {
+  margin-top: 80vh;
+  height: unset;
+}
+
+@media (max-width: 767px) {
+  .about-services {
+    margin-top: 0;
   }
 }
 

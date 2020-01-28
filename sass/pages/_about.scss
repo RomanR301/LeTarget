@@ -38,8 +38,17 @@
     }
   }
   &-team {
+    height: 100vh;
     @media (max-width: $breakpoint-lg) {
       margin-bottom: 100px;
+      height: auto;
+    }
+  }
+  &-services {
+    margin-top: 80vh;
+    height: unset;
+    @media (max-width: $breakpoint-md) {
+      margin-top: 0;
     }
   }
   &-carousel {
@@ -50,8 +59,6 @@
     }
   }
 }
-
-
 
 .team {
   &-carousel {
@@ -120,4 +127,8 @@
       }
     }
   }
+}
+
+.about-services {
+  
 }

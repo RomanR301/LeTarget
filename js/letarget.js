@@ -308,6 +308,15 @@ $(".services-column:nth-child(4) .home-services__item").attr('data-rellax-speed'
 $(".services-column:nth-child(5) .home-services__item").attr('data-rellax-speed', '0.5');
 $(".services-column:nth-child(6) .home-services__item").attr('data-rellax-speed', '1.5');
 
+$(".about-services .services-column:nth-child(1) .home-services__item").attr('data-rellax-speed', '1');
+$(".about-services .services-column:nth-child(2) .home-services__item").attr('data-rellax-speed', '0.5');
+$(".about-services .services-column:nth-child(3) .home-services__item").attr('data-rellax-speed', '1.3');
+$(".about-services .services-column:nth-child(4) .home-services__item").attr('data-rellax-speed', '1');
+$(".about-services .services-column:nth-child(5) .home-services__item").attr('data-rellax-speed', '0.5');
+$(".about-services .services-column:nth-child(6) .home-services__item").attr('data-rellax-speed', '1.3');
+
+
+
 $(".primary__image__container:nth-child(1) .primary__image").attr('data-rellax-speed', '10');
 $(".primary__image__container:nth-child(2) .primary__image").attr('data-rellax-speed', '7');
 $(".primary__image__container:nth-child(3) .primary__image").attr('data-rellax-speed', '9');
