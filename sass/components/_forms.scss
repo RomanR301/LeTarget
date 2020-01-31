@@ -20,6 +20,11 @@
     font-size: 12px;
     color: $greyColor;
   }
+  & .label-name.active {
+    top: -15px;
+    font-size: 12px;
+    color: $greyColor;
+  }
 }
 .form-control-file {
   width: 70%;
@@ -108,3 +113,20 @@
   top: 0;
 }
 
+.wpcf7-response-output {
+  display: none!important;
+}
+.wpcf7-not-valid-tip {
+  font-size: 12px!important;
+  line-height: 16px!important;
+  position: absolute;
+  width: 250px!important;
+  display: block;
+  color: #FF1E1E!important;
+  padding: 5px 0 0 15px;
+}
+
+.form-input.wpcf7-not-valid, .form-textarea.wpcf7-not-valid {
+  border-bottom: 1px solid #FF1E1E;
+  color: #FF1E1E;
+}

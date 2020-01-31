@@ -247,6 +247,10 @@
     opacity: 0;
     &.menu-item-has-children {
       z-index: 1002;
+      // & > a {
+      //   pointer-events: none;
+      //   cursor: default;
+      // }
       &:hover {
         z-index: 1005;
       }

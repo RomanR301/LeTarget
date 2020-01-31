@@ -65,7 +65,26 @@ jQuery(function () {
         cellAlign: 'center',
         pageDots: false,
         wrapAround: true,
-        prevNextButtons: true,
+        prevNextButtons: true
       });
+  }
+  let clientsSlider = document.querySelector('.clients-carousel') !== null;
+  var $clientsCarusel;
+  if (clientsSlider & matchMedia('screen and (min-width: 768px)').matches ) {
+      $clientsCarusel = front.newSlider('.clients-carousel', {
+        cellAlign: 'left',
+        pageDots: true,
+        wrapAround: false,
+        prevNextButtons: false,
+        groupCells: 5
+      });
+  } else {
+    $clientsCarusel = front.newSlider('.clients-carousel', {
+      cellAlign: 'center',
+      pageDots: false,
+      wrapAround: false,
+      prevNextButtons: true,
+      groupCells: 1
+  });
   }
 });

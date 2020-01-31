@@ -242,20 +242,80 @@ jQuery(function () {
       });
   });
 });
+    $(function () {
+        $('.form-control input, form-control textarea')
+            .on('focusin', function(){
+            $(this).parent().parent().find('.label-name').addClass('active');
+        })
+            .on('focusout', function(){
+        $(this).parent().parent().find('.label-name').removeClass('active');
+        })
+        $(".form-control input, .form-control textarea").focusout(function() {
+            let $this = $(this);
+            let $label = $this.parent().parent().find('.label-name')
 
-$(function () {
-    $(".form-control input, .form-control textarea").focusout(function() {
-        if ($(this).val() != "") {
-            $(this).addClass("has-content");
-        }
-        else {
-            $(this).removeClass("has-content");
-        }
-    })
-    $("#uploadBtn").click(function() {
-        $('#uploadFile').addClass("has-content");
-    })
-});
+            if ($this.val() != "") {
+                $this.addClass("has-content");
+                $label.addClass("active");
+            }
+            else {
+                $this.removeClass("has-content");
+                $label.removeClass("active");
+            }
+
+        })
+        $("#uploadBtn").click(function() {
+            $('#uploadFile').addClass("has-content");
+        })
+    });
+// $(function () {
+//     let inputField = $('.form-control input');
+//     $('.form-control input')
+//         .on('focusin', function(){
+//             $(this).parent().parent().find('.label-name').addClass('pressed');
+//         })
+//         .on('focusout', function(){
+//          $(this).parent().parent().find('.label-name').removeClass('pressed');
+//         })
+//         if ($(this).val() != "") {
+//             $(this).addClass("has-content");
+//         }
+//         else {
+//             $(this).removeClass("has-content");
+//         }
+//         if ($('.label-name').hasClass('.pressed')) {
+//             alert('12')
+//         }
+//     })
+
+//     $(function () {
+//         $(".form-control input, .form-control textarea").focusout(function() {
+//             if ($(this).val() != "") {
+//                 $(this).addClass("has-content");
+//             }
+//             else {
+//                 $(this).removeClass("has-content");
+//             }
+
+            
+//         })
+//         $("#uploadBtn").click(function() {
+//             $('#uploadFile').addClass("has-content");
+//         })
+//     });
+
+
+
+
+
+// $(function () {
+//     $(".form-control input, .form-control textarea").focus(function() {
+//         $(this).parent().parent().find('.label-name').addClass('some');
+//     })
+//     $(".form-control input, .form-control textarea").focusOut(function() {
+//         $(this).parent().parent().find('.label-name').removeClass('some');
+//     })
+// });
 
 document.getElementById("uploadBtn").onchange = function () {
     document.getElementById("uploadFile").value = this.value.replace("C:\\fakepath\\", "");
@@ -276,12 +336,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 $(document).on('click', '.nav-btn', function (e) {
     e.preventDefault();
     var navTitle = document.createElement("p");
-    // var goBack = document.createElement("li");
+    var navBack = document.createElement("span");
     navTitle.className = "nav-title";        
-    // goBack.innerHTML = "123";
-    // goBack.className = "prev-page";
-    // goBack.innerHTML = `<i class="icon-arrow-big"></i> Назад`
+    navBack.className = "prev-page"
+    navBack.innerHTML = '<i class="icon-arrow-big"></i>Назад';
     navTitle.innerHTML = $(this).parent().text();
+    $(this).parent().next().append(navBack);
     $(this).parent().next('.sub-menu').prepend(navTitle);
     if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {
         $(this).parent().next('.sub-menu').addClass('menuOpen');
@@ -297,6 +357,7 @@ $(document).on('click', '.prev-page', function (e) {
     if ($(this).parent().hasClass('menuOpen')) {
         $(this).parent().removeClass("menuOpen");
         $(this).parent().find('p').remove();
+        $(this).parent().find('span').remove();
         $(this).parent().parent().removeClass('show');
     }
 });
@@ -314,8 +375,6 @@ $(".about-services .services-column:nth-child(3) .home-services__item").attr('da
 $(".about-services .services-column:nth-child(4) .home-services__item").attr('data-rellax-speed', '1');
 $(".about-services .services-column:nth-child(5) .home-services__item").attr('data-rellax-speed', '0.5');
 $(".about-services .services-column:nth-child(6) .home-services__item").attr('data-rellax-speed', '1.3');
-
-
 
 $(".primary__image__container:nth-child(1) .primary__image").attr('data-rellax-speed', '10');
 $(".primary__image__container:nth-child(2) .primary__image").attr('data-rellax-speed', '7');

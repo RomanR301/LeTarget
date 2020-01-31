@@ -9,19 +9,7 @@
   top: -150px;
   right: -150px;
   &--overflow {
-    // position: relative;
     width: 860px;
-    // display: -webkit-box;
-    // display: -webkit-flex;
-    // display: -ms-flexbox;
-    // display: flex;
-    // -webkit-flex-wrap: wrap;
-    // -ms-flex-wrap: wrap;
-    // flex-wrap: wrap;
-    // -webkit-box-pack: start;
-    // -webkit-justify-content: flex-start;
-    // -ms-flex-pack: start;
-    // justify-content: flex-start;
   }
 }
 
@@ -215,6 +203,9 @@
 // Product table  
 .product-table {
   margin-top: 130px;
+  @media (max-width: $breakpoint-md) {
+    margin-top: 60px;
+  }
   & table, td, td, th {
     border: 1px inset $whiteColor;
     border-collapse: collapse;
@@ -262,6 +253,40 @@
       font-family: 'icomoon';
       content: "\e900";
       font-size: 16px;
+    }
+  }
+  &__desktop {
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
+
+.product-table__mobile {
+  display: none;
+  @media (max-width: $breakpoint-md) {
+    display: flex;
+    justify-content: center;
+    & .table-item {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    & .pricing-title {
+      padding: 12px;
+      background: $whiteColor;
+      color: #000;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 27px;
+      border: 1px solid $whiteColor;
+    }
+    & .pricing-link {
+      text-align: center;
+      padding: 12px 40px;
+      font-size: 18px;
+      line-height: 27px;
+      border: 1px solid $whiteColor;
     }
   }
 }
